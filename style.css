@@ -1,0 +1,122 @@
+body {
+    background: linear-gradient(#000428, #004e92);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, p {
+    background: linear-gradient(#000428, #004e92);
+    color: #ffffffaa; /* beautiful sky blue */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    animation-delay: 0.5s;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    animation-delay: 1s;
+}
+
+.poster {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+.motivation_img {
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: zoomIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Hover effect on image */
+.motivation_img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+} 
+.footer {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px;  /* Distance from the right */
+    font-family: 'Arial', sans-serif;
+    opacity: 0;
+    animation: fadeInFooter 2s ease-out forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.footer p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff6b6b, #ff9a8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin: 0;
+}
+
+.footer span {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* Footer Animation */
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
